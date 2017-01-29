@@ -13,10 +13,11 @@ public class QuickLabel : MonoBehaviour
 	int index;
 
 	public static QuickLabel Create(
+		GameObject go,
 		string title,
 		System.Func<string> GetData)
 	{
-		QuickLabel ql = new GameObject ("QuickLabel:" + title).AddComponent<QuickLabel> ();
+		QuickLabel ql = go.AddComponent<QuickLabel> ();
 		ql.title = title;
 		ql.GetData = GetData;
 		ql.index = MasterCounter;

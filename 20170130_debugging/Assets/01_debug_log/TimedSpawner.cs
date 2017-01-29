@@ -21,8 +21,9 @@ public class TimedSpawner : MonoBehaviour
 	{
 
 // attach a QuickLabel telling how often we spawn
-#if true
-		QuickLabel.Create ("TimedSpawner:" + name + ":",
+#if false
+		QuickLabel.Create ( gameObject,
+		                   "TimedSpawner:" + name + ":",
 		                   () => {
 			return spawnYet.ToString ( "0.0") + "s"; });
 #endif

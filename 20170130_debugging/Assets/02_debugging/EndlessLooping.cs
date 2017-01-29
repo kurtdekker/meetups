@@ -5,7 +5,9 @@ public class EndlessLooping : MonoBehaviour
 {
 	void Start ()
 	{
-		QuickLabel.Create ("Time: ", () =>
+		// Just to show we are "alive" and running
+		QuickLabel.Create ( gameObject,
+		                   "Time: ", () =>
 		{
 			return Time.time.ToString ("0.0"); });
 	}
