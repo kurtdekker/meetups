@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class TimedSpawner : MonoBehaviour
 {
+	public Text OutputText;
+
 	float spawnYet;
 
 	public float SpawnInterval = 5.0f;
@@ -31,6 +34,9 @@ public class TimedSpawner : MonoBehaviour
 
 	void Update ()
 	{
+
+		OutputText.text = spawnYet.ToString ( "0.0") + "s";
+
 		spawnYet += Time.deltaTime;
 		if (spawnYet >= SpawnInterval)
 		{
