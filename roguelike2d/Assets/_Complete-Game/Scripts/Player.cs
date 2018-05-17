@@ -183,6 +183,9 @@ namespace Completed
 				
 				//Disable the player object since level is over.
 				enabled = false;
+
+				// make us do something upon reaching the goal.
+				LevelCompleteAnimation.Attach( gameObject);
 			}
 			
 			//Check if the tag of the trigger collided with is Food.
